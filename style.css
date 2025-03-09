@@ -1,0 +1,300 @@
+body {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 1)), 
+                url('images/img.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#about {
+    background: rgba(255, 255, 255, 0.85); /* Légèrement plus opaque */
+    padding: 30px;
+    border-radius: 12px; /* Coins plus arrondis */
+    max-width: 900px;
+    margin: 50px auto; /* Centrage parfait */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Ombre plus douce */
+    backdrop-filter: blur(8px); /* Effet de flou pour mieux fusionner avec l’arrière-plan */
+}
+
+
+header {
+    background:  #31293F;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+/* Supprime les marges et paddings par défaut */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+/* Barre de navigation */
+nav {
+    background-color: #31293F;/* Couleur personnalisable */
+    padding: 10px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between; /* Alignement : nom à gauche, menu et bouton à droite */
+    align-items: center;
+}
+
+/* Nom à gauche */
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* Liste du menu */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: opacity 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    opacity: 0.7;
+}
+
+/* Bouton CV */
+.cv-btn {
+    background-color: white;
+    color: #31293F;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+}
+
+.cv-btn:hover {
+    background-color: #5a189a;
+    color: white;
+}
+.tooltip {
+    position: absolute;
+    background-color: #5a189a;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    top: 50px;
+    left: 10px;
+    white-space: nowrap;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+section {
+    padding: 40px;
+    text-align: center;
+}
+
+ 
+#projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    
+}
+
+.project {
+    background: rgba(255, 255, 255, 0.95); /* Presque blanc pour meilleure lisibilité */
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 750px;
+    width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    backdrop-filter: blur(6px);
+    margin-bottom: 20px; 
+}
+
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.project h3 {
+    color: #31293F;
+    font-size: 20px;
+}
+
+.project p {
+    font-size: 16px;
+    color: #333;
+}
+#projects h2 {
+    margin-bottom: 20px; /* Espacement plus équilibré */
+}
+
+ 
+
+
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background:   #31293F;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background:  #5a189a;
+}
+/* Section Contact */
+#contact {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: white;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 40px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contact h2 {
+    font-size: 2rem;
+    color: #31293F;
+    margin-bottom: 20px;
+}
+
+/* Style des infos de contact */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 1.2rem;
+}
+
+/* Liens et icônes */
+.contact-info p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.contact-info p a {
+    text-decoration: none;
+    color: #5a189a;
+    transition: color 0.3s ease-in-out;
+}
+
+.contact-info p a:hover {
+    color: #7b2cbf;
+}
+
+/* Icônes */
+.contact-info p i {
+    font-size: 1.5rem;
+    color: #5a189a;
+}
+/* Section Citation */
+#quote {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #31293F, #5a189a);
+    color: white;
+}
+
+.quote-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 800px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.quote-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+blockquote {
+    font-size: 1.8rem;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.author {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #FFD700; /* Or couleur dorée */
+}
+
+.quote {
+    text-align: center; /* Centrage du texte */
+    font-size: 2.5rem; /* Agrandir la citation */
+    font-family: 'Great Vibes', cursive;
+    font-style: italic;
+    font-weight: bold;
+    color: #4A2F45; /* Couleur élégante */
+    margin-top: 300px; /* Ajustement vertical */
+    max-width: 70%; /* Limite la largeur */
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.quote {
+    animation: fadeIn 2s ease-in-out;
+}
+
